@@ -24,6 +24,8 @@ while game_shld_continue:
         print(f"You are right. Current score: {current_score}\n")
         Compare_a = Compare_b
         Compare_b = random.choice(game_data.data)
+        while Compare_a == Compare_b:
+            Compare_b = random.choice(game_data.data)
     else:
         print("Sorry that's wrong.")
         print(f"Final score: {current_score}")
